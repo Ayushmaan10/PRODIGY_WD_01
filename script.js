@@ -1,9 +1,8 @@
-// Get the navbar element
 const navbar = document.getElementById('navbar');
 const navLinks = document.querySelectorAll('.nav-links a');
 const sections = document.querySelectorAll('.section');
 
-// Function to change navbar style on scroll
+
 function handleScroll() {
     if (window.scrollY > 50) {
         navbar.classList.add('scrolled');
@@ -11,11 +10,11 @@ function handleScroll() {
         navbar.classList.remove('scrolled');
     }
     
-    // Highlight the current section in the navbar
+    
     updateActiveSection();
 }
 
-// Function to update active section in navbar
+
 function updateActiveSection() {
     let currentSection = '';
     
@@ -36,10 +35,10 @@ function updateActiveSection() {
     });
 }
 
-// Add scroll event listener
+
 window.addEventListener('scroll', handleScroll);
 
-// Smooth scrolling for navigation links
+
 navLinks.forEach(link => {
     link.addEventListener('click', function(e) {
         e.preventDefault();
@@ -54,7 +53,7 @@ navLinks.forEach(link => {
     });
 });
 
-// Initialize active section on page load
+
 document.addEventListener('DOMContentLoaded', function() {
     handleScroll();
 });
